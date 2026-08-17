@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ACE24 Energy"
+description = "A premium multi-page clean energy technology website for ACE24 Energy, designed for African homes, businesses and institutions seeking reliable, intelligent and financially accessible power solutions."
+version = "1.0.0"
+id = "artifacts/ace24-energy"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21721
+
+[services.development]
+run = "pnpm --filter @workspace/ace24-energy run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ace24-energy", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ace24-energy/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21721"
+BASE_PATH = "/"

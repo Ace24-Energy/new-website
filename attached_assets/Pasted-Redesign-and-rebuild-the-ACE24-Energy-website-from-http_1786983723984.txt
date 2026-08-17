@@ -1,0 +1,1043 @@
+Redesign and rebuild the ACE24 Energy website from https://www.ace24.energy/ into a world class, premium, highly polished clean energy technology website that can compete visually and experientially with the best renewable energy, energy technology, infrastructure and climate technology companies globally.
+
+IMPORTANT:
+
+Do not simply restyle the existing website.
+
+Reimagine the entire information architecture, visual hierarchy, user experience, page structure, storytelling and interaction design while preserving the existing ACE24 brand identity and colour scheme.
+
+First, thoroughly inspect and understand the existing ACE24 website and its content. Extract and reuse the meaningful content, services, projects, statistics, testimonials, company information and calls to action. Do not discard useful existing content simply because the design is changing.
+
+The final result should feel like a significant evolution of the ACE24 brand, not a template redesign.
+
+## BRAND POSITIONING
+
+Position ACE24 Energy as:
+
+A premium African energy technology company powering homes, businesses and institutions with intelligent, accessible and sustainable energy solutions.
+
+The website should communicate:
+
+Premium
+
+Trust
+
+Innovation
+
+Technology
+
+Reliability
+
+Sustainability
+
+African scale
+
+Engineering excellence
+
+Financial accessibility
+
+Long term partnership
+
+ACE24 should NOT look like a typical Nigerian solar installation company.
+
+Avoid the common visual language of generic solar websites, including excessive yellow gradients, generic solar panel stock photos, crowded layouts, overly rounded cards, excessive icons, cheap looking gradients, template style sections and generic "Go Solar" messaging.
+
+Instead, take inspiration from the sophistication of leading global technology, energy infrastructure, mobility and climate technology companies.
+
+The design should feel closer to a premium technology company than a local solar installer.
+
+## DESIGN DIRECTION
+
+Create a sophisticated, editorial, high end visual system.
+
+Use the existing ACE24 colour palette as the foundation. Do not replace the brand colours.
+
+You may refine the shades, contrast, opacity and application of the existing colours to make the brand feel more premium.
+
+Use generous whitespace.
+
+Use strong typography.
+
+Use large editorial headlines.
+
+Use carefully selected imagery.
+
+Use cinematic photography.
+
+Use subtle motion.
+
+Use layered compositions.
+
+Use sophisticated grids.
+
+Use restrained glass effects where appropriate.
+
+Use subtle gradients only where they add depth.
+
+Use high quality micro interactions.
+
+Use elegant hover states.
+
+Use scroll based transitions sparingly.
+
+Use smooth page transitions.
+
+Use subtle animated statistics.
+
+Use parallax effects selectively.
+
+The website should feel expensive, modern and technologically advanced.
+
+Think:
+
+"Premium African energy infrastructure company"
+
+rather than:
+
+"Solar company website."
+
+## HERO SECTION
+
+Create a visually striking hero section.
+
+The first screen should immediately communicate what ACE24 does and why it matters.
+
+Use a strong headline similar in spirit to:
+
+"Powering a Smarter Africa"
+
+or
+
+"Clean Energy, Engineered for Africa"
+
+or another significantly stronger headline based on the actual ACE24 positioning.
+
+Do not blindly use these exact headlines if better copy can be created.
+
+The hero should include a concise supporting statement explaining that ACE24 provides clean energy systems, financing, energy management and related services for homes, businesses and institutions.
+
+Primary CTA:
+
+"Explore Energy Solutions"
+
+Secondary CTA:
+
+"Talk to an Energy Expert"
+
+Include a visually compelling energy related composition.
+
+Do NOT use an obvious generic solar panel photograph.
+
+Consider a cinematic image of modern African architecture powered by clean energy, a sophisticated energy infrastructure installation, a premium home or commercial facility, or a highly polished abstract representation of energy flow.
+
+The hero should immediately feel like a global company.
+
+## NAVIGATION
+
+Create a premium, minimal navigation system.
+
+Suggested structure:
+
+Home
+
+Solutions
+
+For Homes
+
+For Businesses
+
+Energy Financing
+
+Projects
+
+About
+
+Resources
+
+Contact
+
+Include a prominent CTA such as:
+
+"Get an Energy Assessment"
+
+The navigation should remain clean and uncluttered.
+
+On scroll, transition into a refined sticky navigation.
+
+## HOMEPAGE INFORMATION ARCHITECTURE
+
+Rebuild the homepage around a compelling narrative rather than simply reproducing the current section order.
+
+Recommended structure:
+
+1. Hero
+
+2. Trust / credibility strip
+
+3. ACE24 value proposition
+
+4. Solutions overview
+
+5. Why ACE24
+
+6. Featured projects
+
+7. Energy financing
+
+8. Smart energy management
+
+9. ACE24 mobile platform
+
+10. Impact and traction
+
+11. Testimonials
+
+12. FAQ
+
+13. Strong conversion CTA
+
+14. Premium footer
+
+Use the existing website content as the source material for these sections.
+
+## TRUST SECTION
+
+Immediately after the hero, establish credibility.
+
+Use the existing ACE24 metrics and project information.
+
+Present statistics such as:
+
+₦100m+ revenue generated
+
+63+ installations completed
+
+Projected revenue
+
+Projects delivered
+
+Homes and businesses served
+
+However, do not invent statistics.
+
+Only use figures that are actually available in the existing website.
+
+The statistics should be displayed in a premium editorial format rather than basic cards.
+
+## "THE ACE24 DIFFERENCE"
+
+Create a sophisticated section explaining why ACE24 is different.
+
+Use the existing positioning around:
+
+All in one energy platform
+
+Flexible payment options
+
+Quality first approach
+
+Fast response time
+
+Nationwide partner network
+
+Instead of displaying five generic cards with icons, create a visually interesting composition.
+
+For example:
+
+Large statement on one side.
+
+Animated or interactive value propositions on the other.
+
+Each value proposition can reveal additional information on hover or scroll.
+
+## SOLUTIONS
+
+Create a visually impressive Solutions section.
+
+The existing website contains several important service areas. Organize them into a clear ecosystem rather than presenting everything as one long list.
+
+Primary solution categories:
+
+Solar & Clean Energy Systems
+
+Smart Energy Management
+
+Energy Financing
+
+Energy Token Vending
+
+Installation & Maintenance
+
+Recycling
+
+Swap & Upgrade
+
+Consultancy
+
+ACE24 Mobile App
+
+Create visually distinct solution cards with photography, subtle motion and clear descriptions.
+
+Each solution should link to a dedicated page.
+
+## MULTI PAGE WEBSITE
+
+Do NOT keep the entire website as a single page.
+
+Build a proper multi page website.
+
+Recommended sitemap:
+
+/
+
+Home
+
+/solutions
+
+Solutions overview
+
+/solutions/solar-energy
+
+Solar & Clean Energy Systems
+
+/solutions/energy-management
+
+Smart Energy Management
+
+/solutions/financing
+
+Energy Financing
+
+/solutions/recycling
+
+Recycling
+
+/solutions/swap-upgrade
+
+Swap & Upgrade
+
+/solutions/consultancy
+
+Energy Consultancy
+
+/solutions/token-vending
+
+Energy Token Vending
+
+/app
+
+ACE24 Mobile App
+
+/for-homes
+
+Energy solutions for homes
+
+/for-businesses
+
+Energy solutions for businesses
+
+/projects
+
+Projects overview
+
+/projects/[project]
+
+Individual project case studies
+
+/about
+
+About ACE24
+
+/impact
+
+Impact and sustainability
+
+/resources
+
+Resources / insights
+
+/contact
+
+Contact ACE24
+
+Do not create empty placeholder pages.
+
+Every page should have a meaningful layout and content based on the existing ACE24 information.
+
+## SOLUTIONS DETAIL PAGES
+
+Each solution page should feel like a premium product page.
+
+Example structure:
+
+Large cinematic hero
+
+Problem
+
+ACE24 approach
+
+How it works
+
+Key benefits
+
+Technology / capabilities
+
+Who it is for
+
+Relevant projects
+
+Expected outcomes
+
+CTA
+
+Related solutions
+
+Use strong visual storytelling.
+
+## PROJECTS
+
+Turn the existing executed projects into premium case studies.
+
+Current project examples include:
+
+30KVA Solar Power System, Lekki, Lagos
+
+Solar Power Installation, Anchor Services, Lagos
+
+Solar Powered ICT Centre, North East Development Commission
+
+Other existing projects shown on the current website
+
+Do not simply show these as basic cards.
+
+Create a case study experience.
+
+Each project should show:
+
+Location
+
+Client / project name where appropriate
+
+System capacity
+
+Technology deployed
+
+Project challenge
+
+ACE24 solution
+
+Outcome
+
+Relevant photographs
+
+Use large images and strong statistics.
+
+The project section should communicate engineering capability and credibility.
+
+## ENERGY FINANCING
+
+This should be a major strategic section because it differentiates ACE24 from many traditional energy companies.
+
+Create a premium dedicated Energy Financing page.
+
+Explain the existing offerings around:
+
+Flexible payment plans
+
+Energy financing
+
+Leasing
+
+Recycle to purchase
+
+Financing for CNG conversion
+
+EV vehicle acquisition support
+
+Make the experience feel similar to a modern fintech or infrastructure financing product.
+
+Include a strong CTA:
+
+"Find a plan that works for you"
+
+## HOMES
+
+Create a dedicated page for residential customers.
+
+Position ACE24 as a premium energy partner for homeowners.
+
+Content should cover:
+
+Solar systems
+
+Battery backup
+
+Inverters
+
+Energy monitoring
+
+Installation
+
+Maintenance
+
+Financing
+
+Upgrades
+
+Create a simple journey:
+
+Tell us about your home
+
+Understand your energy needs
+
+Get a tailored solution
+
+Finance your system
+
+Installation
+
+Monitor and maintain
+
+CTA:
+
+"Get a Home Energy Assessment"
+
+## BUSINESSES
+
+Create a dedicated commercial page.
+
+Position ACE24 as an energy infrastructure partner for businesses.
+
+Focus on:
+
+Energy reliability
+
+Reduced diesel dependency
+
+Operational continuity
+
+Energy cost optimization
+
+Solar systems
+
+Battery storage
+
+Energy management
+
+Monitoring
+
+Maintenance
+
+Financing
+
+Use the Anchor Services project and other relevant projects as proof points.
+
+CTA:
+
+"Talk to an Energy Specialist"
+
+## ACE24 MOBILE APP
+
+Create a dedicated product style page for the ACE24 app.
+
+Position it as part of the ACE24 digital energy ecosystem.
+
+Use the existing content around:
+
+Managing installations
+
+Payments
+
+Support
+
+Connecting with verified partners and engineers
+
+Centralized energy management
+
+If appropriate, present conceptual app screens using polished UI mockups.
+
+Do not invent unsupported functionality.
+
+## ABOUT PAGE
+
+Transform the existing "Who We Are" content into a compelling corporate story.
+
+Explain:
+
+Why ACE24 exists
+
+The African energy problem
+
+The company's mission
+
+The company's approach
+
+Who ACE24 serves
+
+Its commitment to SDG 7
+
+Its vision for the future
+
+Use a combination of editorial photography, statistics and storytelling.
+
+Avoid a generic corporate "About Us" layout.
+
+## IMPACT
+
+Create an Impact page focused on:
+
+Clean energy adoption
+
+Energy accessibility
+
+Sustainability
+
+Reduced diesel dependency
+
+Responsible recycling
+
+Energy access
+
+African economic development
+
+SDG 7
+
+Only use factual claims supported by the existing content.
+
+## RESOURCES
+
+Create a premium resources section that can later support:
+
+Energy guides
+
+Solar education
+
+Energy financing guides
+
+Energy efficiency insights
+
+Company updates
+
+Case studies
+
+FAQs
+
+Build the structure so ACE24 can continuously publish content later.
+
+## CONTACT / CONVERSION
+
+Create a high converting Contact page.
+
+Make it significantly better than a basic contact form.
+
+Potential flow:
+
+What do you need?
+
+Home energy
+
+Business energy
+
+Financing
+
+Maintenance
+
+Energy management
+
+Other
+
+Then:
+
+Name
+
+Phone
+
+Email
+
+Location
+
+Message
+
+Create a strong CTA.
+
+Also clearly display the existing ACE24 contact information.
+
+Phone:
+
++234 (0) 704 125 9864
+
+Email:
+
+[info@ace24energy.com](mailto:info@ace24energy.com)
+
+Social:
+
+@ace24energyglobal
+
+Do not invent additional contact information.
+
+## FOOTER
+
+Create a large premium footer.
+
+Include:
+
+ACE24 logo
+
+Short company statement
+
+Solutions
+
+For Homes
+
+For Businesses
+
+Projects
+
+About
+
+Resources
+
+Contact
+
+Social links
+
+Contact information
+
+Legal links
+
+Copyright
+
+The footer should feel like the footer of a global technology company.
+
+## VISUAL DESIGN SYSTEM
+
+Create a consistent design system.
+
+Typography:
+
+Use a premium modern sans serif typeface.
+
+Use a strong display style for major headlines.
+
+Use highly readable body typography.
+
+Create clear hierarchy between:
+
+Display
+
+H1
+
+H2
+
+H3
+
+Body
+
+Small labels
+
+Buttons
+
+Stats
+
+Use large typography on desktop.
+
+Spacing:
+
+Use generous spacing.
+
+Do not overcrowd the page.
+
+Grid:
+
+Use a sophisticated 12 column responsive grid.
+
+Cards:
+
+Avoid excessive rounded cards.
+
+Use different visual treatments depending on content.
+
+Images:
+
+Prioritize high quality editorial photography.
+
+Prefer authentic African environments, homes, businesses, infrastructure and people.
+
+Avoid cheesy generic stock photography.
+
+## MOTION
+
+Introduce tasteful premium animation.
+
+Examples:
+
+Hero image reveal
+
+Text fade and slide transitions
+
+Subtle image parallax
+
+Animated statistics
+
+Scroll triggered section reveals
+
+Hover image zoom
+
+Interactive solution cards
+
+Smooth navigation transitions
+
+Magnetic or refined button interactions where appropriate
+
+Keep animations subtle and performant.
+
+The website must never feel like a motion demo.
+
+## RESPONSIVENESS
+
+The website must be exceptionally responsive.
+
+Design specifically for:
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+Pay special attention to mobile navigation, typography, image cropping, cards and conversion CTAs.
+
+The mobile experience should feel intentionally designed, not like a compressed desktop website.
+
+## ACCESSIBILITY
+
+Follow modern accessibility standards.
+
+Ensure:
+
+Strong colour contrast
+
+Keyboard navigation
+
+Accessible buttons
+
+Readable typography
+
+Proper heading hierarchy
+
+Alt text
+
+Visible focus states
+
+Accessible forms
+
+## SEO
+
+Build the website with strong SEO foundations.
+
+Use semantic HTML.
+
+Create meaningful page titles and meta descriptions.
+
+Use proper heading hierarchy.
+
+Use descriptive URLs.
+
+Add appropriate Open Graph metadata.
+
+Create structured data where appropriate.
+
+Ensure pages are crawlable.
+
+## PERFORMANCE
+
+Prioritize performance.
+
+Optimize images.
+
+Use lazy loading where appropriate.
+
+Avoid unnecessary JavaScript.
+
+Keep animations performant.
+
+Ensure the website feels fast even on mobile networks.
+
+This is particularly important because the primary African audience may access the website on mobile devices and variable network connections.
+
+## TECHNICAL QUALITY
+
+Use a clean modern architecture.
+
+Use reusable components.
+
+Create a proper design system.
+
+Do not duplicate code unnecessarily.
+
+Keep components modular.
+
+Ensure navigation works correctly across every page.
+
+All buttons and links should lead somewhere meaningful.
+
+Do not leave placeholder buttons such as "Learn More" that do nothing.
+
+Do not use lorem ipsum.
+
+Do not fabricate company information, projects, statistics, testimonials or capabilities.
+
+Use the existing ACE24 website content as the authoritative source.
+
+## IMPORTANT CONTENT RULE
+
+Before designing, study the current ACE24 website carefully.
+
+Extract the existing content and reorganize it intelligently.
+
+Improve wording where necessary for clarity, hierarchy and premium presentation, but do not change the underlying facts.
+
+Remove duplicate content.
+
+The current website contains repeated sections and repeated testimonials. Consolidate these into cleaner experiences.
+
+Do not simply copy the current layout.
+
+Improve the information architecture.
+
+## PREMIUM EXPERIENCE BENCHMARK
+
+The final website should feel capable of sitting alongside leading global companies in:
+
+Renewable energy
+
+Energy infrastructure
+
+Climate technology
+
+EV mobility
+
+Energy management
+
+Fintech
+
+Technology
+
+The design quality should be comparable to a premium global technology company.
+
+It should feel:
+
+Confident
+
+Elegant
+
+Minimal
+
+Technical
+
+Trustworthy
+
+African
+
+Future facing
+
+Premium
+
+Do not make it look like a generic startup landing page.
+
+## AFRICAN IDENTITY
+
+Although the visual quality should be globally competitive, ACE24 should retain a strong African identity.
+
+Do not hide the fact that this is an African company.
+
+Use authentic African environments and context.
+
+Show African homes, commercial buildings, businesses, infrastructure and communities where appropriate.
+
+The message should be:
+
+"Built for Africa, designed to global standards."
+
+Do not overuse African patterns, flags or stereotypical visual motifs.
+
+The African identity should come through naturally through photography, storytelling, context and the company's mission.
+
+## HOMEPAGE FINAL EXPERIENCE
+
+The homepage should tell a compelling story:
+
+Africa has an energy challenge.
+
+ACE24 is building a smarter way to access, finance, manage and maintain clean energy.
+
+Here is what ACE24 provides.
+
+Here is why customers trust ACE24.
+
+Here is the technology behind the experience.
+
+Here are real projects that prove the capability.
+
+Here is how ACE24 makes clean energy financially accessible.
+
+Here is the impact.
+
+Now take the next step.
+
+The visitor should understand ACE24 within the first 10 seconds.
+
+They should trust the company within the first 30 seconds.
+
+They should have a clear reason to contact ACE24 before leaving the website.
+
+## FINAL DESIGN STANDARD
+
+Do not settle for the first acceptable design.
+
+Iterate on the design until the result feels genuinely premium.
+
+Pay attention to:
+
+Typography
+
+Spacing
+
+Image quality
+
+Composition
+
+Grid alignment
+
+Button design
+
+Navigation
+
+Mobile responsiveness
+
+Animation
+
+Content hierarchy
+
+Conversion paths
+
+Visual consistency
+
+Brand consistency
+
+The final result should look like ACE24 has hired a world class digital product design agency and brand studio.
+
+It should be visually memorable enough that someone comparing ACE24 with other Nigerian and African clean energy companies immediately perceives ACE24 as one of the most sophisticated and technologically advanced companies in the market.
+
+Build the actual working multi page website, not just a visual mockup.
+
+Make all navigation functional.
+
+Make the design production quality.
+
+Do not explain what you would build.
+
+Build it.
