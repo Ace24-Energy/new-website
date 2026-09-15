@@ -3,8 +3,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import NotFound from '@/pages/not-found';
 import { ArrowDownRight, ArrowRight, Check, ChevronDown, ExternalLink, Menu, Minus, Plus, X } from 'lucide-react';
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { Link, Route, Switch, Router as WouterRouter, useLocation, useRoute } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -55,12 +57,35 @@ function Header() {
   </header>;
 }
 
+function AppDownloadModal() {
+  return <Dialog>
+    <DialogTrigger asChild><button type="button" data-testid="link-footer-app" className="focus-ring text-left hover:text-[#b9ef83]">ACE24 app</button></DialogTrigger>
+    <DialogContent className="max-w-md gap-0 rounded-none border-none bg-[#064b28] p-0 text-white shadow-2xl sm:rounded-none [&>button]:hidden">
+      <div className="relative overflow-hidden p-8 sm:p-10">
+        <div aria-hidden className="pointer-events-none absolute -right-12 -top-20 h-56 w-56 rounded-full bg-[#b9ef83]/[0.07]" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-[#b9ef83]/5" />
+        <DialogClose data-testid="button-app-modal-close" className="focus-ring absolute right-6 top-6 z-10 rounded-sm p-1 text-white/50 transition-colors hover:text-[#b9ef83]"><X className="h-5 w-5" /><span className="sr-only">Close</span></DialogClose>
+        <div className="relative">
+          <p className="eyebrow mb-4 text-[#b9ef83]">ACE24 / DIGITAL ENERGY</p>
+          <DialogTitle className="display text-3xl leading-[1.05] text-white sm:text-4xl">Take ACE24 with you.</DialogTitle>
+          <DialogDescription className="mt-4 max-w-sm text-sm leading-7 text-white/65">The ACE24 app is on its way — installations, payments and support in one place. Download links go live soon.</DialogDescription>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <a href="#" onClick={e=>e.preventDefault()} data-testid="link-app-store" className="focus-ring group flex items-center gap-3 border border-white/15 bg-white/4 px-5 py-4 transition-colors hover:border-[#b9ef83]/50 hover:bg-white/8"><FaApple className="h-6 w-6 shrink-0 text-white transition-colors group-hover:text-[#b9ef83]" /><span className="leading-none"><span className="block text-[9px] font-bold uppercase tracking-widest text-white/45">Download on the</span><span className="mt-1.5 block text-base font-bold">App Store</span></span></a>
+            <a href="#" onClick={e=>e.preventDefault()} data-testid="link-play-store" className="focus-ring group flex items-center gap-3 border border-white/15 bg-white/4 px-5 py-4 transition-colors hover:border-[#b9ef83]/50 hover:bg-white/8"><FaGooglePlay className="h-6 w-6 shrink-0 text-white transition-colors group-hover:text-[#b9ef83]" /><span className="leading-none"><span className="block text-[9px] font-bold uppercase tracking-widest text-white/45">GET IT ON</span><span className="mt-1.5 block text-base font-bold">Google Play</span></span></a>
+          </div>
+          <p className="mt-7 text-xs text-white/40">Want first access? <Link href="/contact" data-testid="link-app-modal-contact" className="focus-ring underline decoration-white/30 underline-offset-4 hover:text-[#b9ef83]">Get in touch</Link>.</p>
+        </div>
+      </div>
+    </DialogContent>
+  </Dialog>;
+}
+
 function Footer() {
   return <footer className="bg-[#053d22] text-white">
     <div className="container-wide grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
       <div><img src={`${ASSET}ace24-logo.png`} alt="ACE24 Energy" className="mb-5 h-12 w-[140px] object-contain" /><p className="max-w-xs text-sm leading-7 text-white/65">Reliable power, engineered for African homes, businesses and institutions.</p><div className="mt-6 flex gap-3">{socials.map(([label, href]) => <a key={label} href={href} target="_blank" rel="noreferrer" data-testid={`link-social-${label.toLowerCase()}`} className="focus-ring border border-white/20 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white/75 hover:border-[#b9ef83] hover:text-[#b9ef83]">{label}</a>)}</div></div>
       <div><p className="eyebrow mb-5">Explore</p><div className="grid gap-3 text-sm text-white/70">{[['Solutions','/solutions'],['For homes','/for-homes'],['For businesses','/for-businesses'],['Projects','/projects']].map(([l,h]) => <Link key={h} href={h} data-testid={`link-footer-${l.toLowerCase().replaceAll(' ','-')}`} className="focus-ring hover:text-[#b9ef83]">{l}</Link>)}</div></div>
-      <div><p className="eyebrow mb-5">Company</p><div className="grid gap-3 text-sm text-white/70">{[['About ACE24','/about'],['Impact','/impact'],['Resources','/resources'],['Contact','/contact'],['ACE24 app','/app']].map(([l,h]) => <Link key={h} href={h} data-testid={`link-footer-${h.slice(1).replaceAll('/','-')}`} className="focus-ring hover:text-[#b9ef83]">{l}</Link>)}</div></div>
+      <div><p className="eyebrow mb-5">Company</p><div className="grid gap-3 text-sm text-white/70">{[['About ACE24','/about'],['Impact','/impact'],['Resources','/resources'],['Contact','/contact']].map(([l,h]) => <Link key={h} href={h} data-testid={`link-footer-${h.slice(1).replaceAll('/','-')}`} className="focus-ring hover:text-[#b9ef83]">{l}</Link>)}<AppDownloadModal /></div></div>
       <div><p className="eyebrow mb-5">Let’s talk power</p><p className="text-sm leading-7 text-white/70">145 Ogunisi Road, Hotel Bus Stop,<br />Omole, Ikeja, Lagos.</p><a href="tel:+2347041259864" data-testid="link-footer-phone" className="focus-ring mt-4 block text-sm text-[#b9ef83]">+234 (0) 704 125 9864</a><a href="mailto:info@ace24energy.com" data-testid="link-footer-email" className="focus-ring mt-2 block text-sm text-white/70 hover:text-white">info@ace24energy.com</a></div>
     </div>
     <div className="border-t border-white/10"><div className="container-wide flex flex-col gap-2 py-5 text-[11px] text-white/45 sm:flex-row sm:justify-between"><span>© {new Date().getFullYear()} ACE24 Energy Limited.</span><span>Built for Africa. Designed to global standards.</span></div></div>
