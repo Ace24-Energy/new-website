@@ -26,9 +26,9 @@ function MetaTags({ title, description }: Meta) {
 }
 
 const nav = [
-  { label: 'Solutions', href: '/solutions' }, { label: 'For homes', href: '/for-homes' },
-  { label: 'For businesses', href: '/for-businesses' }, { label: 'Projects', href: '/projects' },
-  { label: 'About', href: '/about' }, { label: 'Resources', href: '/resources' },
+  { label: 'About Us', href: '/about' }, { label: 'Solutions', href: '/solutions' },
+  { label: 'For homes', href: '/for-homes' }, { label: 'For businesses', href: '/for-businesses' },
+  { label: 'Projects', href: '/projects' }, { label: 'Resources', href: '/resources' },
 ];
 const socials = [
   ['Instagram', 'https://www.instagram.com/ace24energy'], ['Facebook', 'https://web.facebook.com/ace24energy'],
