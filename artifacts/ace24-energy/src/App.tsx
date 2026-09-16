@@ -11,6 +11,7 @@ import { Link, Route, Switch, Router as WouterRouter, useLocation, useRoute } fr
 
 const queryClient = new QueryClient();
 const ASSET = '/assets/';
+const WAITLIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxON3lHqVmZ5Iue58N8I8O0FZVjhisrRHAxzQzGvvIAlzyuOQzpkPOC5Y6yiOQhTeyroA/exec';
 
 type Meta = { title: string; description: string };
 function MetaTags({ title, description }: Meta) {
@@ -181,6 +182,7 @@ function WaitlistModal() {
   const [show, setShow] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (localStorage.getItem('ace24-waitlist-dismissed')) return;
@@ -194,6 +196,17 @@ function WaitlistModal() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    const email = emailRef.current?.value.trim();
+    if (email) {
+      // Apps Script Web Apps don't return browser-readable CORS responses,
+      // so this is fire-and-forget; the row write itself is reliable.
+      fetch(WAITLIST_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ email }),
+      }).catch(() => {});
+    }
     setSubmitted(true);
     localStorage.setItem('ace24-waitlist-dismissed', '1');
     setTimeout(() => closeRef.current?.click(), 2600);
@@ -225,7 +238,7 @@ function WaitlistModal() {
             <p className="mt-1 text-xs text-white/60">We’ll email you the moment the app launches.</p>
           </div> : <form onSubmit={handleSubmit} className="mx-auto mt-7 flex max-w-sm flex-col gap-3 sm:flex-row">
             <label htmlFor="waitlist-email" className="sr-only">Email address</label>
-            <input required autoFocus id="waitlist-email" type="email" data-testid="input-waitlist-email" placeholder="you@email.com" className="focus-ring w-full flex-1 border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40" />
+            <input ref={emailRef} required autoFocus id="waitlist-email" type="email" data-testid="input-waitlist-email" placeholder="you@email.com" className="focus-ring w-full flex-1 border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40" />
             <button type="submit" data-testid="button-submit-waitlist" className="focus-ring inline-flex items-center justify-center gap-2 whitespace-nowrap bg-[#b9ef83] px-5 py-3 text-sm font-bold text-[#064b28] transition-transform hover:-translate-y-0.5">Join waitlist <ArrowRight className="h-4 w-4" /></button>
           </form>}
         </div>
