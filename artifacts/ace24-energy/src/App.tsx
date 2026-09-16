@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -169,5 +169,70 @@ function Contact() { const [sent,setSent]=useState(false); const [type,setType]=
 
 function Router() { return <RoutedErrorBoundary><Switch><Route path="/" component={Home} /><Route path="/solutions" component={Solutions} /><Route path="/solutions/solar-energy"><DetailPage kind="solar" /></Route><Route path="/solutions/energy-management"><DetailPage kind="management" /></Route><Route path="/solutions/financing"><DetailPage kind="financing" /></Route><Route path="/solutions/recycling"><DetailPage kind="recycling" /></Route><Route path="/solutions/swap-upgrade"><DetailPage kind="swap" /></Route><Route path="/solutions/consultancy"><DetailPage kind="consultancy" /></Route><Route path="/solutions/token-vending"><DetailPage kind="token" /></Route><Route path="/app" component={AppPage} /><Route path="/for-homes"><AudiencePage /></Route><Route path="/for-businesses"><AudiencePage business /></Route><Route path="/projects" component={Projects} /><Route path="/projects/lekki"><ProjectDetail slug="lekki" /></Route><Route path="/projects/anchor-services"><ProjectDetail slug="anchor-services" /></Route><Route path="/projects/nedc"><ProjectDetail slug="nedc" /></Route><Route path="/about" component={About} /><Route path="/impact" component={Impact} /><Route path="/resources" component={Resources} /><Route path="/contact" component={Contact} /><Route component={NotFound} /></Switch></RoutedErrorBoundary>; }
 function RoutedErrorBoundary({ children }: { children: ReactNode }) { const [location] = useLocation(); return <ErrorBoundary resetKey={location}>{children}</ErrorBoundary>; }
-function App() { return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><Router /></WouterRouter><Toaster /></TooltipProvider></QueryClientProvider>; }
+function PhoneMockup({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  return <div className={`relative w-[102px] shrink-0 rounded-[20px] border-[3px] border-[#0a0a0a] bg-[#0a0a0a] shadow-2xl sm:w-[122px] ${className}`} style={{ aspectRatio: '450 / 974' }}>
+    <div className="absolute inset-0 overflow-hidden rounded-[17px]"><img src={src} alt={alt} className="h-full w-full object-cover object-top" /></div>
+    <div className="absolute left-1/2 top-0 h-[13px] w-[42px] -translate-x-1/2 rounded-b-[9px] bg-[#0a0a0a]" />
+    <div className="absolute bottom-1.5 left-1/2 h-[3px] w-9 -translate-x-1/2 rounded-full bg-white/70" />
+  </div>;
+}
+
+function WaitlistModal() {
+  const [show, setShow] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (localStorage.getItem('ace24-waitlist-dismissed')) return;
+    const t = setTimeout(() => setShow(true), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  const handleOpenChange = (next: boolean) => {
+    if (!next) localStorage.setItem('ace24-waitlist-dismissed', '1');
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    localStorage.setItem('ace24-waitlist-dismissed', '1');
+    setTimeout(() => closeRef.current?.click(), 2600);
+  };
+
+  if (!show) return null;
+
+  return <Dialog defaultOpen onOpenChange={handleOpenChange}>
+    <DialogContent data-testid="modal-waitlist" className="max-w-md gap-0 rounded-none border-none bg-[#064b28] p-0 text-white shadow-2xl sm:max-w-xl sm:rounded-none [&>button]:hidden">
+      <div className="relative overflow-hidden px-6 pb-9 pt-9 sm:px-12 sm:pb-11 sm:pt-11">
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[#b9ef83]/[0.07]" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-14 h-52 w-52 rounded-full bg-[#b9ef83]/5" />
+        <DialogClose ref={closeRef} data-testid="button-close-waitlist" className="focus-ring absolute right-5 top-5 z-20 rounded-sm p-1 text-white/50 transition-colors hover:text-[#b9ef83]"><X className="h-5 w-5" /><span className="sr-only">Close</span></DialogClose>
+
+        <div className="relative flex items-end justify-center pb-1">
+          <PhoneMockup src={`${ASSET}app-splash.png`} alt="ACE24 app splash screen" className="-mr-5 -rotate-6 translate-y-3 sm:-mr-6" />
+          <PhoneMockup src={`${ASSET}app-walkthrough.png`} alt="ACE24 app walkthrough screen" className="z-10 scale-[1.08]" />
+          <PhoneMockup src={`${ASSET}app-home.png`} alt="ACE24 app home screen" className="-ml-5 rotate-6 translate-y-3 sm:-ml-6" />
+        </div>
+
+        <div className="relative mt-8 text-center">
+          <p className="eyebrow mb-4 text-[#b9ef83]">ACE24 APP / COMING SOON</p>
+          <DialogTitle className="display text-3xl leading-[1.05] text-white sm:text-4xl">Be first to use the ACE24 app.</DialogTitle>
+          <DialogDescription className="mx-auto mt-4 max-w-sm text-sm leading-7 text-white/65">Join the waitlist and we’ll let you know the moment it’s ready — installations, payments and support, all in one place.</DialogDescription>
+
+          {submitted ? <div data-testid="waitlist-success" className="mt-8 flex flex-col items-center">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center bg-[#b9ef83] text-[#064b28]"><Check className="h-5 w-5" /></div>
+            <p className="text-sm font-bold text-white">You’re on the list.</p>
+            <p className="mt-1 text-xs text-white/60">We’ll email you the moment the app launches.</p>
+          </div> : <form onSubmit={handleSubmit} className="mx-auto mt-7 flex max-w-sm flex-col gap-3 sm:flex-row">
+            <label htmlFor="waitlist-email" className="sr-only">Email address</label>
+            <input required autoFocus id="waitlist-email" type="email" data-testid="input-waitlist-email" placeholder="you@email.com" className="focus-ring w-full flex-1 border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40" />
+            <button type="submit" data-testid="button-submit-waitlist" className="focus-ring inline-flex items-center justify-center gap-2 whitespace-nowrap bg-[#b9ef83] px-5 py-3 text-sm font-bold text-[#064b28] transition-transform hover:-translate-y-0.5">Join waitlist <ArrowRight className="h-4 w-4" /></button>
+          </form>}
+        </div>
+      </div>
+    </DialogContent>
+  </Dialog>;
+}
+
+function App() { return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><Router /></WouterRouter><WaitlistModal /><Toaster /></TooltipProvider></QueryClientProvider>; }
 export default App;
